@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Sun",
+  "version": "0.1.0",
+  "identifier": "com.harukadev.sun",
+  "build": {
+	"beforeDevCommand": "bun run dev",
+	"devUrl": "http://localhost:1420",
+	"beforeBuildCommand": "bun run build",
+	"frontendDist": "../dist"
+  },
+  "app": {
+	"withGlobalTauri": false,
+	"windows": [
+	  {
+		"label": "main",
+		"title": "Sun",
+		"width": 280,
+		"height": 80,
+		"resizable": false,
+		"decorations": false,
+		"visible": false,
+		"skipTaskbar": true,
+		"alwaysOnTop": true,
+		"url": "main.html",
+		"devtools": false,
+		"focusable": true
+	  },
+	  {
+		"label": "settings",
+		"title": "Sun — Settings",
+		"width": 320,
+		"height": 280,
+		"resizable": false,
+		"decorations": true,
+		"visible": false,
+		"skipTaskbar": false,
+		"center": true,
+		"url": "settings.html",
+		"devtools": false,
+		"focusable": true
+	  }
+	],
+	"security": {
+	  "csp": "default-src 'self'; script-src 'self'"
+	}
+  },
+  "bundle": {
+	"active": true,
+	"targets": "all",
+	"icon": [
+	  "icons/32x32.png",
+	  "icons/128x128.png",
+	  "icons/128x128@2x.png",
+	  "icons/icon.png"
+	],
+	"category": "Utility",
+	"shortDescription": "Brightness control for external monitors",
+	"longDescription": "Sun is a lightweight system tray app for controlling external monitor brightness on Linux via DDC/CI.",
+	"copyright": "Copyright © 2026 HarukaYamamoto0",
+	"license": "MIT",
+	"linux": {
+	  "deb": {
+		"depends": [
+		  "ddcutil"
+		]
+	  },
+	  "rpm": {
+		"depends": [
+		  "ddcutil"
+		]
+	  },
+	  "appimage": {
+		"bundleMediaFramework": false
+	  }
+	}
+  }
+}

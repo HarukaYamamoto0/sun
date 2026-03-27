@@ -1,0 +1,29 @@
+{
+  "name": "sun",
+  "version": "0.1.0",
+  "description": "Brightness control tray app for Linux",
+  "author": {
+    "name": "HarukaYamamoto0",
+    "email": "harukayamamotodev@gmail.com",
+    "url": "https://harukadev.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.0.1",
+    "@tauri-apps/plugin-autostart": "^2.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.10.1",
+    "@types/node": "^25.5.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.3"
+  }
+}
