@@ -63,12 +63,16 @@
 	  "deb": {
 		"depends": [
 		  "ddcutil"
-		]
+		],
+		"postInstallScript": "scripts/postinstall.sh",
+		"postRemoveScript": "scripts/postremove.sh"
 	  },
 	  "rpm": {
 		"depends": [
 		  "ddcutil"
-		]
+		],
+		"postInstallScript": "scripts/postinstall.sh",
+		"postRemoveScript": "scripts/postremove.sh"
 	  },
 	  "appimage": {
 		"bundleMediaFramework": false
